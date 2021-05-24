@@ -2,6 +2,7 @@
 
 import argparse
 import base64
+import re
 import urllib.request
 
 parser = argparse.ArgumentParser()
@@ -21,7 +22,7 @@ with open(args.filein, 'r') as fin,\
 
         lines = [last_line, ]
         last_line = fin.readline()
-        while last_line.startswith(' '):
+        while last_line and not re.match('[A-Z]+[:;]', last_line):
             lines.append(last_line)
             last_line = fin.readline()
         line = ''.join(l.strip() for l in lines)
