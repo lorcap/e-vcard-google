@@ -35,6 +35,9 @@ with open(args.filein, 'r') as fin,\
             PHOTO = ''
             vcard = []
 
+        elif field == 'VERSION' and value == '2.1':
+            print('Input file appears to be v2.1. Please, consider converting it to v3.0 via https://github.com/jowave/vcard2to3.')
+
         elif field == 'FN':
             FN = value
 

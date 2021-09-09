@@ -35,6 +35,12 @@ optional arguments:
   -p, --with-photo  filter out contacts without photo
 ```
 
+## vCard version 2.1
+
+vCard v2.1 (exported from old Android phones) is not supported. Please,
+consider convertining it with Jochen Welle's
+[vcard2to3](https://github.com/jowave/vcard2to3).
+
 
 ## Technical details
 
